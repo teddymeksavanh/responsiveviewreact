@@ -16,8 +16,8 @@ export const Responsive = (HOCComponent, isDevice) => {
 
 		handleDisplay = () => {
 			const { isDevice } = this.state
-			console.log('isDevice', isDevice);
-			isDevice ? this.setState({show: true}) : this.setState({show: false})
+			const condition = window.innerWidth + ' ' + isDevice
+			eval(condition) ? this.setState({show: true}) : this.setState({show: false})
 		}
 		
 		componentDidMount() {

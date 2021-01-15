@@ -26,6 +26,6 @@ export const mobileBreakpoint = 576;
 export const tabletBreakpoint = 768;
 export const desktopBreakpoint = 992;
 
-export const isMobile = () => window.innerWidth <= mobileBreakpoint;
-export const isTablet = () => (window.innderWidth >= mobileBreakpoint && window.innerWidth <= tabletBreakpoint);
-export const isDesktop = () => window.innerWidth >= desktopBreakpoint;
+export const isMobile = `<= ${mobileBreakpoint}`;
+export const isTablet = `window.innderWidth >= ${mobileBreakpoint} && <= ${tabletBreakpoint}`;
+export const isDesktop = `>= ${desktopBreakpoint}`;
