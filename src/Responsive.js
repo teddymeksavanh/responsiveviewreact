@@ -4,7 +4,7 @@ import {
 	isDesktop
 } from './BrowserDetection';
 
-export const Responsive = (HOCComponent, isDevice) => {
+export const Responsive = (HocComponent, isDevice) => {
     return class extends React.Component{
         constructor(props) {
             super(props)
@@ -28,7 +28,7 @@ export const Responsive = (HOCComponent, isDevice) => {
         render(){
 			const { show } = this.state;
             return (
-                show ? <HOCComponent isDevice={this.state.data} {...this.props} /> : null
+                show ? <HocComponent {...this.props} /> : null
             )
         }
     } 
