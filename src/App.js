@@ -11,11 +11,11 @@ function App() {
 				is desktop
 			</div>
 		</Desktop>
-		<Mobile>
+		{/* <Mobile>
 			<div>
 				is mobile
 			</div>
-		</Mobile>
+		</Mobile> */}
 	</React.Fragment>
   );
 }

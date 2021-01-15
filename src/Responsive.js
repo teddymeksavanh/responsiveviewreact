@@ -9,24 +9,20 @@ export const Responsive = (HOCComponent, isDevice) => {
         constructor(props) {
             super(props)
             this.state = {
-				isDevice: isDevice,
+				isDevice,
 				show: false
             }
 		}
 
-		handleDisplay = () => {
-			const { isDevice } = this.state
-			const condition = window.innerWidth + ' ' + isDevice
-			eval(condition) ? this.setState({show: true}) : this.setState({show: false})
-		}
+		handleDisplay = () => this.state.isDevice() ? this.setState({show: true}) : this.setState({show: false})
 		
 		componentDidMount() {
 			this.handleDisplay()
-			window.addEventListener('resize', this.handleDisplay, false)
+			window.addEventListener('resize', this.handleDisplay)
 		}
 
 		componentWillUnmount() {
-			window.removeEventListener('resize', this.handleDisplay, false)
+			window.removeEventListener('resize', this.handleDisplay)
 		}
         
         render(){

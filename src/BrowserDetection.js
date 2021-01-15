@@ -22,8 +22,13 @@
 // export const isBlink = (isChrome || isOpera) && !!window.CSS;
 
 // Breakpoints
-// export const mobileBreakpoint = 576;
+export const mobileBreakpoint = 576;
+export const tabletBreakpoint = 768;
 export const desktopBreakpoint = 992;
 
-export const isMobile = `<= ${desktopBreakpoint}`;
-export const isDesktop = `>= ${desktopBreakpoint}`;
+export function isMobile() { return window.innerWidth <= mobileBreakpoint }
+export function isTablet() { return (window.innderWidth >= mobileBreakpoint && window.innerWidth <= tabletBreakpoint) }
+export function isDesktop() { return window.innerWidth >= desktopBreakpoint }
+
+// export function isTablet = () => (window.innderWidth >= mobileBreakpoint && window.innerWidth <= tabletBreakpoint);
+// export function isDesktop = () => window.innerWidth >= desktopBreakpoint;
