@@ -6,12 +6,11 @@ import './App.css';
 function App() {
   return (
 	<React.Fragment>
-		{/* <Desktop>
+		<Desktop>
 			<div>
 				is desktop
 			</div>
-		</Desktop> */}
-
+		</Desktop>
 		<Mobile>
 			<div>
 				is mobile
